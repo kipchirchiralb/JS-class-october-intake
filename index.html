@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to Javascript</title>
+  </head>
+  <body>
+    <h1>Javascript 101</h1>
+
+    <script>
+      console.log("Hello, World!");
+      console.log(55 * 8);
+
+      for (let i = 0; i < 100; i++) {
+        if (i % 2 == 0) {
+          document.write(
+            "<p style='color:green;'>This is line number " + i + "</p>"
+          );
+        } else {
+          document.write(
+            "<p style='color: red;'>This is line number " + i + "</p>"
+          );
+        }
+      }
+    </script>
+
+    <script src="variables.js"></script>
+  </body>
+</html>
