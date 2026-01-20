@@ -1,6 +1,8 @@
 // Data Types in JavaScript:
 // 1. String: Represents text. Example: "Hello, World!"
 let email = "albert@gmail.com";
+console.log( email.startsWith("a") );
+
 // 2. Number: Represents both integer and floating-point numbers. Example: 42, 3.14
 let score = 65.8;
 // 3. Boolean: Represents true or false values. Example: true, false
