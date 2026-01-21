@@ -113,9 +113,14 @@ const dataset = {
     },
   ],
 };
+// who is the suppolier for moringa seedlings
+// console.log(dataset.seedlings[1].supplier.name);
+
+// total quantity of the first order
+console.log(dataset.orders[0].items[0].quantity + dataset.orders[0].items[1].quantity);
 // email
-console.log(dataset.farm.contact.email);
-console.log(dataset.seedlings[1].price_kes); // the price of one moringa seedling
+// console.log(dataset.farm.contact.email);
+// console.log(dataset.seedlings[1].price_kes); // the price of one moringa seedling
 
 /**
  QUESTIONS

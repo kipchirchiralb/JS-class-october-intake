@@ -52,3 +52,4 @@ eligibleToVote(20);
 eligibleToVote(15);
 eligibleToVote(17.9999999);
 eligibleToVote(-7);
+// functions are like variables -- 

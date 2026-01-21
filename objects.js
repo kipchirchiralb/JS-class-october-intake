@@ -11,7 +11,7 @@ const student = {
     ward: "Kapsuswa",
   },
   clan: "Mooi",
-  submitAssignment: function sendingEmailAssignment(subject) {
+  submitAssignment: function (subject) {
     console.log("A simulation of submitting an assignment for " + subject);
   },
 };
