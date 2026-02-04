@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
+  </head>
+  <body>
+    <h1>Document Object Model</h1>
+    <p>
+      DOM converts a html page to a js object called "document" and all elements
+      in the page are also js object
+    </p>
+    <p>This allows us to manipulate html using js</p>
+    <input type="password" name="pass" id="pass" />
+    <script>
+      const user = {
+        name: "albert",
+        age: 90,
+      };
+      console.log(typeof document);
+      console.log(typeof user);
+
+      console.log(document);
+      console.log(user);
+
+      const headingOne = document.querySelector("h1");
+      console.log(typeof headingOne); //object
+      headingOne.textContent = "ALbert kipchirchir- DOM";
+
+      headingOne.addEventListener("copy", (e) => {
+        e.preventDefault();
+        alert("No copy pasting!!!!!");
+      });
+
+      document.querySelector("input").addEventListener("paste", (e) => {
+        e.preventDefault();
+        alert("no pasting passwords");
+      });
+
+      //   Explore the things that we can do with the DOM - html css and js ---
+    </script>
+  </body>
+</html>

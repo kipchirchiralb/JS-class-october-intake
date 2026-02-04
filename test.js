@@ -1,5 +1,5 @@
 let email = "albert@gmail.com";
 
-let userMail = email;
+console.log( email.charAt(0) );
 
-console.log(userMail);
+console.log( email.substring(0,4) );
