@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav {
+        display: none;
+      }
+      .visible {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="menu-btn">Menu</button>
+    <nav id="mobile-menu">
+      <a href="#">home</a>
+      <a href="#">about</a>
+      <a href="#">contact</a>
+      <a href="#">home</a>
+      <a href="#">home</a>
+    </nav>
+    <h3>Cart Count: <span id="count">0</span></h3>
+    <section class="products">
+      <div class="prod">
+        <h2>Apple macbook</h2>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="prod">
+        <h2>Apple Iphone</h2>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="prod">
+        <h2>Samsung s10</h2>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="prod">
+        <h2>Infinix zfold</h2>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+    </section>
+
+    <script>
+      const menuButton = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      //  getElementByID ,
+
+      menuButton.addEventListener("dblclick", () => {
+        mobileMenu.setAttribute("class", "visible");
+      });
+
+      const allCartButtons = document.querySelectorAll(".add-to-cart");
+      const cartItems = [];
+
+      console.log(allCartButtons.length);
+      allCartButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+          console.log("Button Clicked");
+          console.log(event.target); // button
+          console.log(event.target.previousElementSibling); // h2
+          cartItems.push(event.target.previousElementSibling.textContent); // h2 content
+          document.getElementById("count").textContent = cartItems.length;
+        });
+      });
+    </script>
+  </body>
+</html>
