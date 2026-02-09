@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Creating and Deleting Elements</h1>
+    <button id="add-btn">Add Element</button>
+    <span id="count">5</span>
+
+    <ul>
+      <li>Mercy</li>
+    </ul>
+    <!-- sliders -- share your work on the whataspp group -->
+    <!-- exommerce -->
+    <!-- API ---  -->
+    <!-- backend -- databases -->
+    <script>
+      document.querySelector("h1").remove();
+      const addBtn = document.getElementById("add-btn");
+
+      const myNewH2 = document.createElement("h2");
+      myNewH2.textContent = "Albert Kicphir hir";
+
+      const users = ["Albert", "Kicphir", "Josehp", "John", "Doe"];
+
+      addBtn.addEventListener("click", () => {
+        document.body.appendChild(myNewH2);
+        let count = parseInt(document.getElementById("count").textContent);
+        // parseInt is a function that converts a string to a number. In this case, it converts the text content of the element with id "count" to an integer so that we can perform arithmetic operations on it.
+        count++;
+        document.getElementById("count").textContent = count;
+      });
+
+      users.forEach((user) => {
+        const userListItem = document.createElement("li");
+        const deleteItem = document.createElement("button");
+        userListItem.textContent = user;
+        deleteItem.textContent = "Delete";
+
+        userListItem.appendChild(deleteItem);
+        // <li>Albert <button>Delete</button></li>
+
+        deleteItem.addEventListener("click", (event) => {
+          event.target.parentElement.remove();
+        });
+
+        document.querySelector("ul").appendChild(userListItem);
+      });
+    </script>
+  </body>
+</html>

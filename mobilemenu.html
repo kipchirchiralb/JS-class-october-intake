@@ -43,7 +43,12 @@
     </section>
 
     <script>
+      // document ---- is an object that represents the entire HTML document. It provides methods and properties to interact with the content of the page, such as selecting elements, manipulating the DOM, and handling events.
+      // every elements is an object  that has properties and methods that can be accessed and manipulated using JavaScript. For example, a button element has properties like textContent, classList, and methods like addEventListener.
       const menuButton = document.getElementById("menu-btn");
+      menuButton.textContent = "click here for the menu";
+      menuButton.style.backgroundColor = "blue";
+
       const mobileMenu = document.getElementById("mobile-menu");
       //  getElementByID ,
 
@@ -61,9 +66,13 @@
           console.log(event.target); // button
           console.log(event.target.previousElementSibling); // h2
           cartItems.push(event.target.previousElementSibling.textContent); // h2 content
+          console.log(cartItems);
+
           document.getElementById("count").textContent = cartItems.length;
         });
       });
+
+      // slides / carousel
     </script>
   </body>
 </html>
